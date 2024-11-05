@@ -83,7 +83,7 @@ for i, sample in tqdm(enumerate(dataset)): # Process each sample in the filtered
                     sample["sentence"] += "。"  # Add a period if it doesn't end with ! or ?
                     sample["sentence_length"] = len(sample["sentence"]) # Get sentence lengths  
                     sample["audio_length"] = len(sample["audio"]["array"]) / sample["audio"]["sampling_rate"]  # Get audio length, remove if not needed
-                    if max > sample["audio_length"] > min and not re.search(char, sample["sentence"]) and sample["sentence_length"] > min_char:
+                    if max > sample["audio_length"] > min and not re.search(char, sample["sentence"]) and sample["sentence_length"] > min_char and bool(sample["sentence"]): #check again before write
                         sf.write(audio_path, sample['audio']['array'], sample['audio']['sampling_rate']) # Get files      
                         process_directory(folder_path, (folder_path + "/trimmed/")) # for use with audio sample silence removal script
                         if os.path.isfile(audio_path):
