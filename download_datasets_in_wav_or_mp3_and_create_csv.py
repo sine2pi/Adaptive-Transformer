@@ -3,7 +3,7 @@ import soundfile as sf, os, re, neologdn, librosa
 from tqdm import tqdm
 import shutil
 
-dataset = load_dataset("mozilla-foundation/common_voice_17_0", "ja")["train"]
+dataset = load_dataset("mozilla-foundation/common_voice_17_0", "ja")["train"].filter(lambda sample: bool(sample["sentence"])) #skips samples with no transcript
 
 name = "cv_17"
 ouput_dir = "./datasets/"
