@@ -40,7 +40,7 @@ Proactive Adjustments: -- Just like learning rate schedulers, adjusting base bas
 --Regularization for Rotation Matrix: Add a regularization term to the loss function to encourage the rotation matrix to remain orthogonal during training. done
 
 
-Combined Rotary, Orthogonally Initialized, and Givens Rotation Matrices: This component integrates rotary embeddings, an orthogonally initialized rotation matrix, and Givens rotation matrices. This robust combination provides stable and effective positional embeddings, enhancing the model's capacity to represent positional information accurately. The integration helps capture dependencies and relationships within the feature space through rotational symmetry.
+Combined Rotary, Orthogonally Initialized, and Givens Rotation Matrices: This component integrates rotary embeddings, an orthogonally initialized rotation matrix, and Givens rotation matrices. This robust combination provides stable and effective positional embeddings, enhancing the model's capacity to represent positional information accurately. The integration helps capture dependencies and relationships within the feature space through rotational symmetry. done
 
 
 ### Rotation Block Output
@@ -54,17 +54,17 @@ The transformation applied to the tensor using the Combined Rotary Embedding, Gi
 ### Performance Improvements
 
 Applying these transformations to a tensor can improve the model's performance in several ways:
-
-1. **Rotational Symmetry**: These transformations exploit rotational symmetry in the feature space, which can help the model recognize patterns and relationships that are invariant to rotations. This is particularly useful in tasks where rotation invariance is important, such as image and signal processing, as well as natural language processing where word order may vary.
-
-2. **Enhanced Representational Power**: By introducing rotations, the model can create more complex and nuanced feature representations. This allows the model to capture richer and more detailed information from the input data, leading to better performance on tasks like classification, regression, and generation.
-
-3. **Dimensional Decorrelation**: Applying orthogonal transformations helps in decorrelating the dimensions of the feature space. This can reduce redundancy and improve the efficiency of the learned representations, making the model more robust and less prone to overfitting.
-
-4. **Stable Training**: Orthogonal matrices preserve the Euclidean norm of the vectors they transform, which can help in maintaining numerical stability during training. This is beneficial for gradient-based optimization algorithms, as it prevents gradients from exploding or vanishing.
-
-5. **Efficient Computations**: Using Givens rotations allows for efficient computation of rotations in high-dimensional spaces. This can lead to faster training times and reduced computational complexity compared to other methods of achieving similar transformations.
-
-Overall, these transformations can help in enhancing the model's ability to learn meaningful patterns from the data, resulting in improved performance and generalization on a variety of tasks.
+    
+    1. **Rotational Symmetry**: These transformations exploit rotational symmetry in the feature space, which can help the model recognize patterns and relationships that are invariant to rotations. This is particularly useful in tasks where rotation invariance is important, such as image and signal processing, as well as natural language processing where word order may vary.
+    
+    2. **Enhanced Representational Power**: By introducing rotations, the model can create more complex and nuanced feature representations. This allows the model to capture richer and more detailed information from the input data, leading to better performance on tasks like classification, regression, and generation.
+    
+    3. **Dimensional Decorrelation**: Applying orthogonal transformations helps in decorrelating the dimensions of the feature space. This can reduce redundancy and improve the efficiency of the learned representations, making the model more robust and less prone to overfitting.
+    
+    4. **Stable Training**: Orthogonal matrices preserve the Euclidean norm of the vectors they transform, which can help in maintaining numerical stability during training. This is beneficial for gradient-based optimization algorithms, as it prevents gradients from exploding or vanishing.
+    
+    5. **Efficient Computations**: Using Givens rotations allows for efficient computation of rotations in high-dimensional spaces. This can lead to faster training times and reduced computational complexity compared to other methods of achieving similar transformations.
+    
+    Overall, these transformations can help in enhancing the model's ability to learn meaningful patterns from the data, resulting in improved performance and generalization on a variety of tasks.
 
 
