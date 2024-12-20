@@ -46,7 +46,8 @@ Combined Rotary, Orthogonally Initialized, and Givens Rotation Matrices: This co
 ### Rotation Block Output
 The transformation applied to the tensor using the Combined Rotary Embedding, Givens Rotation Matrix, and Rotary Orthogonal Matrix is summarized by the following equation:
 
-![svg](https://github.com/user-attachments/assets/a57ce24c-69c5-4f70-9766-584e1faa0a55)
+![CodeCogsEqn](https://github.com/user-attachments/assets/b4f79ef5-246d-40b2-aed7-ef44b28d7dd9)
+
 
 ---
 
