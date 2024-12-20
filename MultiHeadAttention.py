@@ -1,4 +1,3 @@
-
 class MultiHeadAttention(nn.Module):
     use_sdpa = True
 
