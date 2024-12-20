@@ -46,9 +46,7 @@ Combined Rotary, Orthogonally Initialized, and Givens Rotation Matrices: This co
 ### Rotation Block Output
 The transformation applied to the tensor using the Combined Rotary Embedding, Givens Rotation Matrix, and Rotary Orthogonal Matrix is summarized by the following equation:
 
-$$
-\mathbf{x}_{\text{transformed}} = \mathbf{x} \cdot \left( \prod_{k=1}^{N} G_k \right) \cdot R
-$$
+$$ \mathbf{x}_{\text{transformed}} = \mathbf{x} \cdot \left( \prod_{k=1}^{N} G_k \right) \cdot R $$
 
 ---
 
