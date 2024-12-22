@@ -1,5 +1,9 @@
 ## Adaptive Transformer
 
+"The concept of making the adaptation factor itself adaptive opens up a fascinating research direction. Imagine a model that doesn't just learn, but learns how to learn - continuously calibrating its own learning dynamics." An AI model.
+
+Roadmap--
+
 Dynamically Adjusted Base: -- The base parameter, which affects the frequencies used in positional encodings, will dynamically adjust based on the model’s performance during training. This can lead to better capture of positional information, especially if the data characteristics vary over time. done
 
 Responsive Hyperparameter Auto-Tuning: -- The model will continuously fine-tune itself in response to the loss observed during training. This means it can potentially learn more effectively by automatically adjusting the positional encoding's influence on learning. done for base frequency - rope embeddings. done
