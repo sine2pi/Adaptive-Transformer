@@ -1,6 +1,6 @@
 ## Adaptive Transformer
 
-"The concept of making the adaptation factor itself adaptive opens up a fascinating research direction. Imagine a model that doesn't just learn, but learns how to learn - continuously calibrating its own learning dynamics." An AI model.
+"The concept of making the adaptation factor itself adaptive opens up a fascinating research direction. Imagine a model that doesn't just learn, but learns how to learn - continuously calibrating its own learning dynamics." copilot.
 
 Roadmap--
 
