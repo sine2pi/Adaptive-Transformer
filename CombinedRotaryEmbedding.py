@@ -5,17 +5,16 @@ class CombinedRotaryEmbedding(nn.Module):
         self.n_state = n_state
         self.n_head = n_head
         self.h_dim = n_state // n_head
+        
         self.num_rotations = num_rotations
         self.base = base
         self.checkpointing = checkpointing
         
         self.thetas = nn.Parameter(torch.zeros(num_rotations))
-        self.rotation_pairs = nn.Parameter(torch.rand(num_rotations, 2) * self.h_dim)
-
         self.theta_scale = nn.Parameter(torch.ones(1))  
-
-        self.rotation_matrix = nn.Parameter(torch.eye(self.h_dim))
         
+        self.rotation_pairs = nn.Parameter(torch.rand(num_rotations, 2) * self.h_dim)
+        self.rotation_matrix = nn.Parameter(torch.eye(self.h_dim))
         self.inv_freq = nn.Parameter(1.0 / (self.base ** (torch.arange(0, self.h_dim, 2).float() / self.h_dim)))
     
     def givens_rotation_matrix(self, n_state, i, j, theta):
