@@ -55,14 +55,12 @@ class CombinedRotaryEmbedding(nn.Module):
         
         for k in range(self.num_rotations):
             i, j = self.rotation_pairs[k].long()
-            
             theta = self.thetas[k] * self.theta_scale  
             
             G = self.givens_rotation_matrix(self.h_dim, i, j, theta)
             x = torch.matmul(x, G)
         
         x = torch.matmul(x, self.rotation_matrix)
-        
         x = x.view(batch_size, seq_len, self.n_head, self.h_dim)
         
         sinusoid_inp = torch.einsum('i, j -> i j', torch.arange(seq_len, device=x.device), self.inv_freq.to(x.device))
