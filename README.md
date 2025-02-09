@@ -1,3 +1,5 @@
+--  outdated. see Echo.
+
 ## Adaptive Transformer
 
 Quote from some AI model:
